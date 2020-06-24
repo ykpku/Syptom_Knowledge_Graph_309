@@ -35,8 +35,9 @@ class CsvUtility(object):
 	def write_relation(file_name, map_key_data, map_value_data):
 		with open(file_name, 'w', encoding='utf-8') as f:
 			for id, key in enumerate(map_key_data):
-				for value in 
-				f.write(data + '\t' + map_value_data[id])
+				for value in map_value_data[id]:
+					f.write(key + '\t' + value + '\n')
+
 
 
 
